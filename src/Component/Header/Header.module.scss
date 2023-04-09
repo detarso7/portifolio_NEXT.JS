@@ -11,7 +11,6 @@
         @include max-width;
 
         .image{
-            border: 1px solid red;
             width: 45rem;
             height: 45rem;
             position: absolute;
@@ -45,8 +44,17 @@
                 color: $white;
             }
 
+            .span{
+                font-weight: bold;
+                font-size: 2rem;
+            }
+
             span{
                 margin-bottom: 1rem;
+                background-color: $primary;
+                padding: 1rem 1rem;
+                max-width: 50%;
+                color: $background;
             }
 
             p{

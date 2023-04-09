@@ -14,7 +14,6 @@ export const getStaticProps = async () => {
 // -----------
 
 
-
 // Content
 export default function Home({header}) {
 
