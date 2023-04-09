@@ -1,0 +1,25 @@
+@mixin max-width {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin animation{
+    animation: up-down 0.5s infinite alternate;
+    @keyframes up-down {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(-1rem);
+        }
+    }
+
+}

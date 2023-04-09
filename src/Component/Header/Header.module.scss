@@ -1,0 +1,106 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.header-wrapper{
+    background-color: $background;
+    margin-bottom: $marginBottom;
+
+    .header{
+        min-height: 100vh;
+        position: relative;
+        @include max-width;
+
+        .image{
+            border: 1px solid red;
+            width: 45rem;
+            height: 45rem;
+            position: absolute;
+            top: 50%;
+            left: 2rem;
+            transform: translateY(-50%);
+
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 60%;
+                height: 60%;
+                top: -0.5rem;
+                left: -0.5rem;
+                border-top: 0.5rem solid $lightPrimary;
+                border-left: 0.5rem solid $lightPrimary;
+            }
+        }
+
+        .content{
+            max-width: 76rem;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+
+            :is(span, p){
+                color: $white;
+            }
+
+            span{
+                margin-bottom: 1rem;
+            }
+
+            p{
+                align-self: flex-end;
+                max-width: 40rem;
+            }
+        }
+
+        .social{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5rem;
+            gap: 2.5rem;
+            background-color: $lightPrimary;
+            position: fixed;
+            top: 4rem;
+            right: 2rem;
+            z-index: 12;
+
+            .icon{
+ 
+                font-size: 3rem;
+                color: $background;
+
+                &:hover{
+                    color: $darkPrimary;
+                }
+            }
+        }
+
+        .arrow{
+            
+            width: 9rem;
+            height: 9rem;
+            border-radius: 50%;
+            background-color: $primary;
+            position: absolute;
+            bottom: 4rem;
+            left: 50%;
+            @include flex-center;
+            @include animation;
+
+            .icon{
+                width: 4rem;
+                height: 4rem;
+                color: $background;
+
+                &:hover{
+                    color: $darkPrimary;
+                }
+            }
+        }
+    }
+}
+
