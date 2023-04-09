@@ -2,16 +2,18 @@ import styles from './Header.module.scss'
 import {RiLinkedinFill, RiWhatsappFill} from 'react-icons/ri'
 import {AiFillInstagram, AiOutlineArrowDown} from 'react-icons/ai'
 
-const Header = () => {
+const Header = ({header}) => {
+
+const {image, name, ocupation, summary} = header
+
     return (
     <header className={styles['header-wrapper']}>
         <div className={styles.header}>
             <div className={styles.image}>IMAGEM</div>
             <div className={styles.content}>
-                <span>Olá, meu nome é Saulo de Tarso. Sou um...</span>
-                <h1>Desenvolvedor Frontend</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Similique illo deleniti ea totam! Magni sequi est at commodi.
+                <span>Olá, meu nome é {name}. Sou um...</span>
+                <h1>{ocupation}</h1>
+                <p>{summary}
                 </p>
             </div>
             <div className={styles.social}>
