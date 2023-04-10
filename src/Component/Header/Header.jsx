@@ -8,7 +8,7 @@ import useSanityImage from 'src/Hooks/useSanityImage'
 
 
 const Header = ({header}) => {
-
+console.log(header)
 const {image, name, ocupation, summary} = header
 const imageUrl = useSanityImage() 
 
@@ -16,13 +16,12 @@ const imageUrl = useSanityImage()
     <header className={styles['header-wrapper']}>
         <div className={styles.header}>
             <div className={styles.image}>
-                <Image src={imageUrl(image).url()} layout='fill'/>
+                <Image src={imageUrl(image).url()} alt='Saulo de Tarso' layout='fill'/>
             </div>
             <div className={styles.content}>
-                <span>Olá, meu nome é <span className={styles.span}>{name}</span>. Sou um...</span>
+                <span><span className={styles.span}>{name}</span></span>
                 <h1>{ocupation}</h1>
-                <p>{summary}
-                </p>
+                <p>{summary}</p>
             </div>
             <div className={styles.social}>
                 <a href="#" className={styles.icon}><RiLinkedinFill/></a>

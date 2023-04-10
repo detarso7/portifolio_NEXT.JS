@@ -17,8 +17,6 @@ export const getStaticProps = async () => {
 // Content
 export default function Home({header}) {
 
-console.log(header)
-
   return (
     <div>
       <Header header={header}/>

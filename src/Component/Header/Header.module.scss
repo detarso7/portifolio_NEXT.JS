@@ -17,6 +17,7 @@
             top: 50%;
             left: 2rem;
             transform: translateY(-50%);
+            box-shadow: 5px 5px 20px;
 
             &::before{
                 content: '';
@@ -53,13 +54,18 @@
                 margin-bottom: 1rem;
                 background-color: $primary;
                 padding: 1rem 1rem;
-                max-width: 50%;
+                max-width: 39%;
                 color: $background;
             }
 
             p{
-                align-self: flex-end;
-                max-width: 40rem;
+                max-width: 75%;
+                margin-left: 6rem;
+            }
+
+            h1{
+                max-width: 78.5%;
+                margin-left: 2rem;
             }
         }
 
