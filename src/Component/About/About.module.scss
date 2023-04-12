@@ -1,0 +1,26 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.about{
+    @include max-width;
+    margin-bottom: $marginBottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .image{
+        width: 47rem;
+        height: 43rem;
+        position: relative;
+    }
+    
+}
+
+.content{
+    width: 100%;
+    max-width: 60rem;
+
+    a {
+        margin-top: 1.5rem;
+    }
+}
