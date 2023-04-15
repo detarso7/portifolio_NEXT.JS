@@ -3,7 +3,7 @@
 
 .header-wrapper{
     background-color: $background;
-    margin-bottom: $marginBottom;
+    margin-bottom: calc($marginBottom + 7rem);
 
     .header{
         min-height: 100vh;

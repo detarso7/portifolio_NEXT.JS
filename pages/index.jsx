@@ -5,10 +5,12 @@ import client from 'src/Sanity'
 // Request
 export const getStaticProps = async () => {
   const header = await client.fetch(`*[_type == "header"][0]`)
+  const about = await client.fetch(`*[_type == "about"][0]`)
 
   return {
     props: {
-      header
+      header,
+      about
     }
   }
 }
@@ -16,12 +18,14 @@ export const getStaticProps = async () => {
 
 
 // Content
-export default function Home({header}) {
+export default function Home({header, about}) {
 
   return (
     <>
       <Header header={header}/>
-      <main><About/></main>
+      <main>
+        <About about={about}/>
+      </main>
     </>
 
   )
