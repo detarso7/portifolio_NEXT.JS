@@ -1,5 +1,6 @@
 import About from "src/Component/About/About"
 import Header from "src/Component/Header/Header"
+import Skill from "src/Component/Skill/Skill"
 import client from 'src/Sanity'
 
 // Request
@@ -25,6 +26,7 @@ export default function Home({header, about}) {
       <Header header={header}/>
       <main>
         <About about={about}/>
+        <Skill/>
       </main>
     </>
 
