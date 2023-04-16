@@ -1,19 +1,23 @@
 import styles from './Project.module.scss'
 import Projects from './Projects'
 
-const Project = () => {
+const Project = ({pro}) => {
+
+   console.log(pro.projects)
+
+    const {title, projects, button, url} = pro
+
+    const renderProj = projects.map((p)=>(
+        <Projects key={p._key} proje={p}/>
+    ))
+
     return (
         <section className={styles.project}>
-            <h2>Projetos</h2>
+            <h2>{title}</h2>
             <ul className={styles.list}>
-                <Projects/>
-                <Projects/>
-                <Projects/>
-                <Projects/>
-                <Projects/>
-                <Projects/>
+                {renderProj}
             </ul>
-            <a href="#" className="btn btn-primary">Veja Mais</a>
+            <a href={url} className="btn btn-primary">{button}</a>
         </section>
     )
 }

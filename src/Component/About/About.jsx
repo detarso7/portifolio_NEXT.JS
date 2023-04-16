@@ -1,6 +1,8 @@
 import Image from 'next/image'
-import styles from './About.module.scss'
 import useSanityImage from 'src/Hooks/useSanityImage'
+
+import styles from './About.module.scss'
+
 import Box from '../UI/Box'
 
 const About = ({about}) => {
