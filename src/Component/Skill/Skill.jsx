@@ -1,31 +1,37 @@
 import styles from './Skill.module.scss'
 import Experience from './Experience'
 
-const Skill = () => {
+const Skill = ({skills}) => {
+
+    const {title, subtitle, skill_title, skills_list, experience_title, experience} = skills
+
+    const renderListHab = skills_list.map((list) => (
+        <li key={list._key} className='h5'>{list.skill}</li>
+    ))
+
+    const renderListExp = experience.map((ex) => (
+        <Experience key={ex._key} company={ex.company} experience={ex.experience} period={ex.period} />       
+    ))
+    
     return (
         <section className={styles.section}>
             <div className={styles.skills}>
                 <div className={styles.heading}>
-                    <h2>Habilidades e Experiências</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Dignissimos, ex saepe sequi omnis voluptatum nisi? 
+                    <h2>{title}</h2>
+                    <p>{subtitle} 
                     </p>
                 </div>
                 <div className={styles.content}>
-                    <h3>Habilidades</h3>
+                    <h3>{skill_title}</h3>
                     <ul>
-                        <li className='h5'>Habilidade</li>
-                        <li className='h5'>Habilidade</li>
-                        <li className='h5'>Habilidade</li>
+                        {renderListHab}
                     </ul>
                 </div>
             </div>
             <div className={styles.experiences}>
-                <h2>Experiências</h2>
+                <h2>{experience_title}</h2>
                 <ul>
-                    <Experience/>
-                    <Experience/>
-                    <Experience/>
+                    {renderListExp}
                 </ul>
             </div>
         </section>

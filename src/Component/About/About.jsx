@@ -14,7 +14,7 @@ const About = ({about}) => {
     return(
         <section className={styles.about}>
             <div className={styles.image}>
-                <Image src={imageUrl(image).url()} layout='fill'/>
+                <Image src={imageUrl(image).url()} alt='Saulo de Tarso' layout='fill'/>
                 <div className={styles.box}>
                     <Box text="Sobre"/>
                 </div>

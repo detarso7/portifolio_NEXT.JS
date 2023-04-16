@@ -1,14 +1,15 @@
 import styles from './Experience.module.scss'
 
 
-const Experience = () => {
+const Experience = ({company, experience, period}) => {
+
     return (
         <>
             <li className={styles.experience}>
-                <div className={styles.period}> 2020 - 2023</div>
+                <div className={styles.period}> {period}</div>
                 <div className={styles.description}>
-                    <h4>Desenvolvedor front end</h4>
-                    <h5>Braccialetto</h5>
+                    <h4>{experience}</h4>
+                    <h5>{company}</h5>
                 </div>
             </li>
         </>
