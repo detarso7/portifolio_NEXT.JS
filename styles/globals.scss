@@ -111,4 +111,12 @@ p {
         color: $black;
         font-family: &fontFamily;
     }
+
+    .error{
+        color: $error;
+        margin-top: 0.5rem;
+        text-align: left;
+        display: block;
+        font-size: 1.4rem;
+    }
 }
