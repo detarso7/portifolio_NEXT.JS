@@ -1,4 +1,5 @@
 import About from "src/Component/About/About"
+import Footer from "src/Component/Footer/Footer"
 import Header from "src/Component/Header/Header"
 import Project from "src/Component/Project/Project"
 import Skill from "src/Component/Skill/Skill"
@@ -33,6 +34,7 @@ export default function Home({header, about, skills, projects}) {
         <About about={about}/>
         <Skill skills={skills}/>
         <Project pro={projects}/>
+        <Footer/>
       </main>
     </>
 

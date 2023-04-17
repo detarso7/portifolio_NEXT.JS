@@ -17,7 +17,7 @@ const Project = ({pro}) => {
             <ul className={styles.list}>
                 {renderProj}
             </ul>
-            <a href={url} className="btn btn-primary">{button}</a>
+            <a href={url} className={[`btn btn-primary ${styles.margin}`]}>{button}</a>
         </section>
     )
 }
