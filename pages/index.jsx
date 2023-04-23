@@ -11,13 +11,15 @@ export const getStaticProps = async () => {
   const about = await client.fetch(`*[_type == "about"][0]`)
   const skills = await client.fetch(`*[_type == "skills"][0]`)
   const projects = await client.fetch(`*[_type == "projects"][0]`)
+  const contact = await client.fetch(`*[_type == "contact"][0]`)
 
   return {
     props: {
       header,
       about,
       skills,
-      projects
+      projects,
+      contact
     }
   }
 }
@@ -25,7 +27,7 @@ export const getStaticProps = async () => {
 
 
 // Content
-export default function Home({header, about, skills, projects}) {
+export default function Home({header, about, skills, projects, contact}) {
 
   return (
     <>
