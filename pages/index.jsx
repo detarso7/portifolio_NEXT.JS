@@ -11,7 +11,9 @@ export const getStaticProps = async () => {
   const about = await client.fetch(`*[_type == "about"][0]`)
   const skills = await client.fetch(`*[_type == "skills"][0]`)
   const projects = await client.fetch(`*[_type == "projects"][0]`)
+  const footer = await client.fetch(`*[_type == "footer"][0]`)
   const contact = await client.fetch(`*[_type == "contact"][0]`)
+  const social = await client.fetch(`*[_type == "social"][0]`)
 
   return {
     props: {
@@ -19,7 +21,9 @@ export const getStaticProps = async () => {
       about,
       skills,
       projects,
-      contact
+      footer,
+      contact,
+      social
     }
   }
 }
@@ -27,16 +31,16 @@ export const getStaticProps = async () => {
 
 
 // Content
-export default function Home({header, about, skills, projects, contact}) {
+export default function Home({header, about, skills, projects, footer, social}) {
 
   return (
     <>
-      <Header header={header}/>
+      <Header header={header} social={social}/>
       <main>
         <About about={about}/>
         <Skill skills={skills}/>
         <Project pro={projects}/>
-        <Footer/>
+        <Footer footer={footer}/>
       </main>
     </>
 

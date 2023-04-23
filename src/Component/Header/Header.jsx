@@ -7,9 +7,12 @@ import Image from 'next/image'
 import useSanityImage from 'src/Hooks/useSanityImage'
 
 
-const Header = ({header}) => {
-console.log(header)
+const Header = ({header, social}) => {
+    
+
 const {image, name, ocupation, summary} = header
+const {linkedin, instagram, whatsapp} = social
+
 const imageUrl = useSanityImage() 
 
     return (
@@ -24,9 +27,9 @@ const imageUrl = useSanityImage()
                 <p>{summary}</p>
             </div>
             <div className={styles.social}>
-                <a href="#" className={styles.icon}><RiLinkedinFill/></a>
-                <a href="#" className={styles.icon}><RiWhatsappFill/></a>
-                <a href="#" className={styles.icon}><AiFillInstagram/></a>              
+                <a href={linkedin} className={styles.icon}><RiLinkedinFill/></a>
+                <a href={whatsapp} className={styles.icon}><RiWhatsappFill/></a>
+                <a href={instagram} className={styles.icon}><AiFillInstagram/></a>              
             </div>
             <a href="#" className={styles.arrow}>
                 <AiOutlineArrowDown className={styles.icon}/>

@@ -120,3 +120,20 @@ p {
         font-size: 1.4rem;
     }
 }
+
+.error, .success{
+    text-align: left;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    display: block;
+}
+
+.error{
+    color: $error;
+    font-size: 1.4rem;
+}
+
+.success{
+    font-size: 2.6rem;
+    color: $white;
+}
