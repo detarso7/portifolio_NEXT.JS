@@ -1,0 +1,21 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.navbar-wrapper{
+    background-color: $background;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    .navbar{
+        @include max-width;
+        @include flex-center;
+        padding: 2.3rem 2rem;
+
+        img{
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+        }
+    }
+}

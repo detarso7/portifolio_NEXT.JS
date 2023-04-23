@@ -1,0 +1,20 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.item{
+    display: inline-block;
+
+    &:not(:last-of-type){
+        margin-right: 2rem;
+    }
+
+    a{
+        padding: 1rem;
+        color: $lightPrimary;
+        cursor: pointer;
+
+        &:hover{
+            font-weight: 600;
+        }
+    }
+}

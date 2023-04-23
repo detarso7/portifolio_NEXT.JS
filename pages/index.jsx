@@ -1,6 +1,7 @@
 import About from "src/Component/About/About"
 import Footer from "src/Component/Footer/Footer"
 import Header from "src/Component/Header/Header"
+import Navbar from "src/Component/Navbar/Navbar"
 import Project from "src/Component/Project/Project"
 import Skill from "src/Component/Skill/Skill"
 import client from 'src/Sanity'
@@ -35,6 +36,7 @@ export default function Home({header, about, skills, projects, footer, social}) 
 
   return (
     <>
+      <Navbar/>
       <Header header={header} social={social}/>
       <main>
         <About about={about}/>
