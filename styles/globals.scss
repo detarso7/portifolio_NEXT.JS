@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixins.scss';
 
 *{
     margin: 0;
@@ -8,6 +9,14 @@
 
 html{
     font-size: 62.5%;
+
+    @include device (notebook){
+        font-size: 60%;
+    }
+
+    @include device (mobile){
+        font-size: 58%;
+    }
 }
 
 body{
@@ -28,6 +37,10 @@ h1, .h1{
     line-height: 7.5rem;
     font-weight: 700;
     color: $primary;
+
+    @include device (notebook){
+        font-size: 6.5rem;
+    }
 }
 
 h2, .h2{
