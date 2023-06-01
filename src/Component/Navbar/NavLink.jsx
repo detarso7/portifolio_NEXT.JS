@@ -1,10 +1,10 @@
-import Image from 'next/image'
 import styles from './NavLink.module.scss'
+import { Link } from 'next/link'
 
 const NavLink = ({text}) => {
     return(
             <li className={styles.item}>
-                <a href="#" className='h6'>{text}</a>
+                <Link className='h6'>{text}</Link>
             </li>
     )
 }

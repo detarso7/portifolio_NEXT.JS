@@ -7,7 +7,7 @@ const Navbar = () => {
         <section className={ styles['navbar-wrapper']}>
             <div className={styles.navbar}>
                 <a href="/" className={styles.logo}>
-                    <Image src='/logo.png' layout='fixed' width={42} height={27}/>
+                    <Image src='/logo.png' layout='fixed' width={42} height={27} alt=''/>
                 </a>
                 <nav>
                     <ul className={styles.list}>
